@@ -1,0 +1,14 @@
+.idea/
+*.iml
+__pycache__/
+.vscode/
+AC*json
+*.pyc
+.terraform.lock.hcl
+.terraform/
+terraform.tfstate*
+cloudsearch_sql.txt
+cloudsearch_output.txt
+venv/
+.DS_Store
+.project
