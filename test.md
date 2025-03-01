@@ -46,6 +46,24 @@ No modules.
 | <a name="input_region"></a> [region](#input\_region) | AWS region | `string` | n/a | yes |
 | <a name="input_sse_algorithm"></a> [sse\_algorithm](#input\_sse\_algorithm) | n/a | `string` | `"AES256"` | no |
 
+### example
+```
+terraform
+variable "buckets" {
+  description = "Map of bucket configurations"
+  type = map(object({
+    lifecycle_enabled   = bool
+    transition_days     = optional(number)
+    storage_class       = optional(string)
+    expiration_days     = optional(number)
+    website_enabled     = bool
+    block_public_access = bool
+    cloudfront_enabled  = bool
+  }))
+}
+```
+
+
 ## Outputs
 
 No outputs.
